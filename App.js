@@ -31,8 +31,8 @@ export default class App extends React.Component {
   }
 
   showMarker(){
+    return (
     this.state.data.map((item, i) => {
-      console.log(item)
       return (
         <MapView.Marker
           title={item.title}
@@ -40,6 +40,7 @@ export default class App extends React.Component {
           coordinate={{ latitude: item.latitude, 
                         longitude: item.longitude}}
         />)})
+    )
   };
 
   render() {
